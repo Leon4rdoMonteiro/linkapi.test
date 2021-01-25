@@ -1,0 +1,66 @@
+{
+
+    "success": true,
+    "data": [
+        {
+            "id": 1,
+            "deal_id": 1,
+            "order_nr": 1,
+            "product_id": 1,
+            "product_variation_id": null,
+            "item_price": 2800,
+            "discount_percentage": 0,
+            "duration": 1,
+            "duration_unit": null,
+            "sum_no_discount": 0,
+            "sum": 22400,
+            "currency": "BRL",
+            "enabled_flag": true,
+            "add_time": "2021-01-21 02:26:03",
+            "last_edit": null,
+            "comments": null,
+            "active_flag": true,
+            "tax": 0,
+            "name": "Monitor Dell, 34 Polegadas",
+            "sum_formatted": "R$ 22.400",
+            "quantity_formatted": "8",
+            "quantity": 8
+        },
+        {
+            "id": 2,
+            "deal_id": 1,
+            "order_nr": 2,
+            "product_id": 2,
+            "product_variation_id": null,
+            "item_price": 10000,
+            "discount_percentage": 0,
+            "duration": 1,
+            "duration_unit": null,
+            "sum_no_discount": 0,
+            "sum": 60000,
+            "currency": "BRL",
+            "enabled_flag": true,
+            "add_time": "2021-01-21 20:47:04",
+            "last_edit": null,
+            "comments": null,
+            "active_flag": true,
+            "tax": 0,
+            "name": "iPhone 12",
+            "sum_formatted": "R$ 60.000",
+            "quantity_formatted": "6",
+            "quantity": 6
+        }
+    ],
+    "additional_data": {
+        "products_quantity_total": 14,
+        "products_sum_total": 82400,
+        "variations_enabled": false,
+        "products_quantity_total_formatted": "14",
+        "products_sum_total_formatted": "R$ 82.400",
+        "pagination": {
+            "start": 0,
+            "limit": 100,
+            "more_items_in_collection": false
+        }
+    }
+}

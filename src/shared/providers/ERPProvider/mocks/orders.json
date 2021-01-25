@@ -1,0 +1,29 @@
+{
+    "retorno": {
+        "pedidos": [
+            {
+                "pedido": {
+                    "numero": "82",
+                    "idPedido": 52389274,
+                    "codigos_rastreamento": {
+                        "codigo_rastreamento": "SX052413665BR"
+                    },
+                    "volumes": [
+                        {
+                            "volume": {
+                                "servico": "SEDEX - CONTRATO",
+                                "codigoRastreamento": "SG016634880BR"
+                            }
+                        },
+                        {
+                            "volume": {
+                                "servico": "PAC CONTRATO AGENCIA",
+                                "codigoRastreamento": "EC314697823BR"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
