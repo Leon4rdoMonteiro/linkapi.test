@@ -13,8 +13,9 @@ Autor: [Leonardo Monteiro](https://github.com/Leon4rdoMonteiro)
    + 🌠 Foram utilizadas as tecnologias:
         - Node.js, Express, MongoDB.
 
-   + 📝 Padronização de código:
-        - ESlint e Prettier.
+
+   + 📝 Padronização de código e documentação:
+        - ESlint, Prettier e Swagger. 
       
    + 🛠 Ferramentas/Libs:
         - Insomnia, Mongoose, Axios, Jest
@@ -60,7 +61,7 @@ Autor: [Leonardo Monteiro](https://github.com/Leon4rdoMonteiro)
      $ npm run start:dev
 
      ```
-  - 4.Executar API em ambiente de staging/produção:
+  - 5.Executar API em ambiente de staging/produção:
 
      ```bash
      $ npm run start:prod
@@ -73,3 +74,6 @@ Autor: [Leonardo Monteiro](https://github.com/Leon4rdoMonteiro)
    - 1.Existe um arquivo de importação de workspace criado para utilizar como cliente HTTP (Insomnia)
      - Localizado na pasta /http_client no código fonte
 
+   - 2.Link da especificação (Documentação de API):
+        - https://app.swaggerhub.com/apis-docs/Leon4rdoMonteiro/linkapi-test.api/1.0.0
+   
