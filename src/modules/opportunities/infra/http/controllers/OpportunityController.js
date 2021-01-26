@@ -6,17 +6,17 @@ const getAllOpportunities = new GetAllOpportunitiesService();
 
 class OpportunityController {
   async create(req, res) {
-    const { statusCode, ...data } = await createOpportunitiesService.run();
+    const { status, ...data } = await createOpportunitiesService.run();
 
-    return res.status(statusCode).json(data);
+    return res.status(status).json(data);
   }
 
   async index(req, res) {
     const { date } = req.query;
 
-    const { statusCode, ...data } = await getAllOpportunities.run(date);
+    const { status, ...data } = await getAllOpportunities.run(date);
 
-    return res.status(statusCode).json(data);
+    return res.status(status).json(data);
   }
 }
 

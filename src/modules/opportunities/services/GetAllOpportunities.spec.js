@@ -27,7 +27,7 @@ describe('GetAllOpportunitiesService', () => {
 
     const expectedResponse = {
       error: false,
-      statusCode: 200,
+      status: 200,
       data: response.data,
     };
 
@@ -44,7 +44,7 @@ describe('GetAllOpportunitiesService', () => {
 
     const expectedResponse = {
       error: true,
-      statusCode: 400,
+      status: 400,
       message: 'The provided date is invalid',
     };
 
@@ -60,7 +60,7 @@ describe('GetAllOpportunitiesService', () => {
 
     const expectedResponse = {
       error: true,
-      statusCode: 404,
+      status: 404,
       message: 'No saved opportunities found',
     };
 

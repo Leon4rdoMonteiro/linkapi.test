@@ -36,7 +36,7 @@ describe('CreateOpportunityService', () => {
 
     const expectedResponse = {
       error: false,
-      statusCode: 200,
+      status: 200,
       data: response.data,
     };
 
@@ -54,7 +54,7 @@ describe('CreateOpportunityService', () => {
 
     const expectedResponse = {
       error: false,
-      statusCode: 200,
+      status: 200,
       data: response.data,
     };
 

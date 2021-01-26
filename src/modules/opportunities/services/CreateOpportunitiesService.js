@@ -61,12 +61,12 @@ class CreateOpportunitiesService {
 
       return {
         error: false,
-        statusCode: 200,
+        status: 200,
         data: opportunity,
       };
     } catch (err) {
       throw new AppError({
-        statusCode: err.status,
+        status: err.status,
         message: err.message,
       });
     }
