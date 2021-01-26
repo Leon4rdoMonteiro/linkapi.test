@@ -43,12 +43,12 @@ class App {
   }
 
   contentNegotiation() {
-    this.server.use(ErrorHandler.contentNegotiation);
-    this.server.use(ErrorHandler.contentTypeNegotiation);
+    this.server.use(ErrorHandler.notAcceptable);
+    this.server.use(ErrorHandler.unsupportedMediaType);
   }
 
   errorHandler() {
-    this.server.use(ErrorHandler.methodNegotiation);
+    this.server.use(ErrorHandler.methodNotAllowed);
     this.server.use(ErrorHandler.catchNotFound);
     this.server.use(ErrorHandler.appError);
   }

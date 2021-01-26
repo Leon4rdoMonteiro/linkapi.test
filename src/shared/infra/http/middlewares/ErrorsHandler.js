@@ -9,7 +9,7 @@ module.exports = {
     });
   },
 
-  methodNegotiation(req, res, next) {
+  methodNotAllowed(req, res, next) {
     const allowed = ['PUT', 'GET', 'OPTIONS', 'HEAD'];
     const path = '/v1/opportunities';
 
@@ -23,7 +23,7 @@ module.exports = {
     next();
   },
 
-  contentNegotiation(req, res, next) {
+  notAcceptable(req, res, next) {
     const allowed = ['application/json', '*/*'];
 
     if (!allowed.includes(req.headers.accept)) {
@@ -36,7 +36,7 @@ module.exports = {
     next();
   },
 
-  contentTypeNegotiation(req, res, next) {
+  unsupportedMediaType(req, res, next) {
     const allowed = ['application/json', '*/*'];
     const contentType = req.headers['content-type'];
 

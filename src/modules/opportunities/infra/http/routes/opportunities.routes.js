@@ -1,4 +1,5 @@
 const { Router } = require('express');
+
 const OpportunityController = require('../controllers/OpportunityController');
 
 const routes = Router();

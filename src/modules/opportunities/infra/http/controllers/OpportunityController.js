@@ -1,8 +1,8 @@
-const GetAllOpportunitiesService = require('../../../services/GetAllOpportunitiesService');
 const CreateOpportunitiesService = require('../../../services/CreateOpportunitiesService');
+const GetAllOpportunitiesService = require('../../../services/GetAllOpportunitiesService');
 
 const createOpportunitiesService = new CreateOpportunitiesService();
-const getAllOpportunities = new GetAllOpportunitiesService();
+const getAllOpportunitiesService = new GetAllOpportunitiesService();
 
 class OpportunityController {
   async create(req, res) {
@@ -14,7 +14,7 @@ class OpportunityController {
   async index(req, res) {
     const { date } = req.query;
 
-    const { status, ...data } = await getAllOpportunities.run(date);
+    const { status, ...data } = await getAllOpportunitiesService.run(date);
 
     return res.status(status).json(data);
   }
