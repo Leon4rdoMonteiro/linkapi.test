@@ -12,7 +12,7 @@ const { MONGO_HOST } = process.env;
 const mongoConfig = require('../../../../config/mongo');
 const rateLimiterConfig = require('../../../../config/rateLimiter');
 
-const ErrorHandler = require('../middlewares/errorHandler');
+const ErrorHandler = require('../middlewares/ErrorsHandler');
 
 const routes = require('../routes');
 
@@ -48,9 +48,9 @@ class App {
   }
 
   errorHandler() {
-    this.server.use(ErrorHandler.appError);
     this.server.use(ErrorHandler.methodNegotiation);
     this.server.use(ErrorHandler.catchNotFound);
+    this.server.use(ErrorHandler.appError);
   }
 }
 

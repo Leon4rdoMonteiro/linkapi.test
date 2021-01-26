@@ -2,8 +2,6 @@ const AppError = require('../../../errors/AppError');
 
 module.exports = {
   catchNotFound(req, res, next) {
-    next();
-
     return res.status(404).json({
       error: true,
       status: 404,
@@ -16,8 +14,7 @@ module.exports = {
     const path = '/v1/opportunities';
 
     if (!allowed.includes(req.method) && req.path === path) {
-      return res.status(405).json({
-        error: true,
+      throw new AppError({
         status: 405,
         message: 'Method Not Allowed',
       });
@@ -30,8 +27,7 @@ module.exports = {
     const allowed = ['application/json', '*/*'];
 
     if (!allowed.includes(req.headers.accept)) {
-      return res.status(406).json({
-        error: true,
+      throw new AppError({
         status: 406,
         message: 'Not Acceptable',
       });
@@ -45,8 +41,7 @@ module.exports = {
     const contentType = req.headers['content-type'];
 
     if (contentType && !allowed.includes(contentType)) {
-      return res.status(415).json({
-        error: true,
+      throw new AppError({
         status: 415,
         message: 'Unsupported Media Type',
       });
@@ -71,7 +66,7 @@ module.exports = {
     return res.status(500).json({
       error: true,
       status: 500,
-      message: 'Internal server error',
+      message: 'Internal Server Error',
     });
   },
 };
