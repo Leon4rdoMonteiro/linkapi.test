@@ -9,10 +9,10 @@ const expressRateLimit = require('express-rate-limit');
 
 const { MONGO_HOST } = process.env;
 
-const mongoConfig = require('../../../../../config/mongo');
-const rateLimiterConfig = require('../../../../../config/rateLimiter');
+const mongoConfig = require('../../../../config/mongo');
+const rateLimiterConfig = require('../../../../config/rateLimiter');
 
-const errorHandler = require('../middlewares/errorHandler');
+const ErrorHandler = require('../middlewares/errorHandler');
 
 const routes = require('../routes');
 
@@ -21,6 +21,7 @@ class App {
     this.server = express();
     this.middlewares();
     this.mongo();
+    this.contentNegotiation();
     this.routes();
     this.errorHandler();
   }
@@ -41,8 +42,15 @@ class App {
     });
   }
 
+  contentNegotiation() {
+    this.server.use(ErrorHandler.contentNegotiation);
+    this.server.use(ErrorHandler.contentTypeNegotiation);
+  }
+
   errorHandler() {
-    this.server.use(errorHandler);
+    this.server.use(ErrorHandler.appError);
+    this.server.use(ErrorHandler.methodNegotiation);
+    this.server.use(ErrorHandler.catchNotFound);
   }
 }
 

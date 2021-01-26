@@ -1,13 +1,13 @@
 class AppError {
   error = true
-  statusCode
+  status
   message
 
-  constructor({ statusCode, message }) {
+  constructor({ status, message }) {
     this.error = this.error;
-    this.statusCode = statusCode;
+    this.status = status;
     this.message = message;
   }
 }
 
-module.exports = AppError
+module.exports = AppError;
